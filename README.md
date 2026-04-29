@@ -2,6 +2,8 @@
 ## SKILLS UTILIZADOS:
 * https://skills.sh/anthropics/skills/frontend-design
 * npx skills add https://github.com/angular/skills
+## ia
+* opencode: big pickle
 
 ![Vista previa del sitio](restaurante2.png)
 
