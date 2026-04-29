@@ -1,0 +1,24 @@
+<section id="menu" class="section-padding">
+  <div class="container">
+    <p class="section-label" animateOnScroll>Especialidades</p>
+    <h2 class="section-title" animateOnScroll>
+      Nuestra <em>Carta</em>
+    </h2>
+    <p class="section-subtitle" animateOnScroll>Una selección curada de sabores excepcionales</p>
+    <div class="row g-4">
+      @for (item of menuItems; track item.name) {
+        <div class="col-md-6 col-lg-4">
+          <div class="menu-card" animateOnScroll>
+            <img [src]="item.image" class="card-img-top" [alt]="item.name">
+            <div class="card-body">
+              <span class="badge badge-accent">{{ item.category }}</span>
+              <h5 class="card-title">{{ item.name }}</h5>
+              <p class="card-text">{{ item.description }}</p>
+              <p class="price">{{ item.price }}</p>
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>

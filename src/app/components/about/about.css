@@ -1,0 +1,114 @@
+#about {
+  background-color: var(--color-ivory);
+  position: relative;
+  overflow: hidden;
+}
+
+#about::before {
+  content: '';
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(201, 169, 97, 0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.section-label {
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  margin-bottom: 1rem;
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: 3.2rem;
+  font-weight: 400;
+  color: var(--color-charcoal);
+  line-height: 1.2;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.section-title em {
+  font-style: italic;
+  color: var(--color-gold);
+}
+
+.about-text {
+  font-family: var(--font-accent);
+  font-size: 1.15rem;
+  line-height: 2;
+  color: var(--color-taupe);
+  font-weight: 300;
+  margin-bottom: 1.5rem;
+}
+
+.about-image-wrapper {
+  position: relative;
+  padding: 2rem;
+}
+
+.about-image-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc(100% - 2rem);
+  height: calc(100% - 2rem);
+  border: 1px solid var(--color-gold);
+  opacity: 0.3;
+  transform: translate(1.5rem, 1.5rem);
+  z-index: 0;
+}
+
+#about img {
+  position: relative;
+  z-index: 1;
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  border-radius: 0;
+}
+
+#about img:hover {
+  transform: scale(1.03);
+}
+
+.stats-row {
+  border-top: 1px solid rgba(201, 169, 97, 0.2);
+  padding-top: 2rem;
+  margin-top: 2rem;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-number {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  color: var(--color-gold);
+  display: block;
+  line-height: 1;
+}
+
+.stat-label {
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--color-taupe);
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2.2rem;
+  }
+  .about-text {
+    font-size: 1rem;
+  }
+}

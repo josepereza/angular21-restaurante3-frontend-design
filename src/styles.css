@@ -1,0 +1,72 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,700;1,6..96,400&family=Manrope:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&display=swap');
+
+:root {
+  --color-charcoal: #1a1a1a;
+  --color-ink: #2c2c2c;
+  --color-gold: #c9a961;
+  --color-gold-light: #dfc8a0;
+  --color-cream: #f5f0e8;
+  --color-ivory: #faf8f5;
+  --color-taupe: #8a8078;
+  --font-display: 'Bodoni Moda', 'Playfair Display', serif;
+  --font-body: 'Manrope', 'Inter', sans-serif;
+  --font-accent: 'Cormorant Garamond', serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-charcoal);
+  background-color: var(--color-ivory);
+  overflow-x: hidden;
+  line-height: 1.7;
+  font-weight: 300;
+  font-size: 16px;
+}
+
+::selection {
+  background: var(--color-gold);
+  color: #fff;
+}
+
+/* Scroll Animations */
+[animateOnScroll] {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+[animateOnScroll].visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered delays for grid items */
+.menu-card[animateOnScroll].visible:nth-child(1) { transition-delay: 0s; }
+.menu-card[animateOnScroll].visible:nth-child(2) { transition-delay: 0.1s; }
+.menu-card[animateOnScroll].visible:nth-child(3) { transition-delay: 0.2s; }
+.menu-card[animateOnScroll].visible:nth-child(4) { transition-delay: 0.3s; }
+.menu-card[animateOnScroll].visible:nth-child(5) { transition-delay: 0.4s; }
+.menu-card[animateOnScroll].visible:nth-child(6) { transition-delay: 0.5s; }
+
+.section-padding {
+  padding: 8rem 0;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .section-padding {
+    padding: 5rem 0;
+  }
+}

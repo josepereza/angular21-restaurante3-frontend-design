@@ -1,0 +1,152 @@
+#menu {
+  background-color: var(--color-charcoal);
+  position: relative;
+  overflow: hidden;
+}
+
+#menu::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23c9a961" fill-opacity="0.03"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
+}
+
+.section-label {
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: 3.2rem;
+  font-weight: 400;
+  color: #fff;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.section-title em {
+  font-style: italic;
+  color: var(--color-gold);
+}
+
+.section-subtitle {
+  font-family: var(--font-accent);
+  font-size: 1.15rem;
+  color: rgba(255, 255, 255, 0.6);
+  font-style: italic;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 4rem;
+  position: relative;
+  z-index: 1;
+}
+
+.menu-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(201, 169, 97, 0.15);
+  border-radius: 0;
+  overflow: hidden;
+  height: 100%;
+  transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  z-index: 1;
+}
+
+.menu-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: var(--color-gold);
+  transform: scaleX(0);
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.menu-card:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(201, 169, 97, 0.3);
+  transform: translateY(-8px);
+}
+
+.menu-card:hover::before {
+  transform: scaleX(1);
+}
+
+.menu-card img {
+  height: 240px;
+  object-fit: cover;
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  filter: contrast(1.1) brightness(0.95);
+}
+
+.menu-card:hover img {
+  transform: scale(1.08);
+  filter: contrast(1.1) brightness(1.05);
+}
+
+.card-body {
+  padding: 1.8rem;
+  position: relative;
+}
+
+.badge-accent {
+  font-family: var(--font-body);
+  font-size: 0.65rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  background: rgba(201, 169, 97, 0.15) !important;
+  color: var(--color-gold-light) !important;
+  padding: 0.4rem 1rem;
+  border-radius: 0;
+  border: 1px solid rgba(201, 169, 97, 0.2);
+  font-weight: 400;
+}
+
+.card-title {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  color: #fff;
+  font-weight: 400;
+  margin: 1rem 0 0.8rem;
+  letter-spacing: 0.5px;
+}
+
+.card-text {
+  font-family: var(--font-accent);
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  font-weight: 300;
+}
+
+.price {
+  font-family: var(--font-display);
+  color: var(--color-gold);
+  font-size: 1.4rem;
+  font-weight: 400;
+  margin: 1rem 0 0;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2.2rem;
+  }
+  .menu-card img {
+    height: 200px;
+  }
+}
