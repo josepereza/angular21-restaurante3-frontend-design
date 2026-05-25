@@ -2,12 +2,13 @@ import { Component, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { ScrollAnimateDirective } from '../../directives/scroll-animate.directive';
-
+import {  CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 @Component({
   selector: 'app-reservation',
   imports: [CommonModule, FormsModule, ScrollAnimateDirective],
   templateUrl: './reservation.html',
-  styleUrl: './reservation.css'
+  styleUrl: './reservation.css',
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class Reservation {
   reservation = signal({
